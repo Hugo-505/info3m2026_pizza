@@ -3,20 +3,11 @@
 {% block titulo %} Login {% endblock %}
 
 {% block conteudo %}
-    <h2>Login</h2>
 
-    <form action="{{url_for('login')}}" method="post">
-        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-        <legend class="fieldset-legend">Login</legend>
-
-        <label class="label">Usuário</label>
-        <input type="email" class="input" placeholder="Email" />
-
-        <label class="label">Senha</label>
-        <input type="password" class="input" placeholder="Password" />
-
-        <button class="btn btn-neutral mt-4">Login</button>
-        </fieldset>
-    </form>
+<form action="{{url_for('usuarios.autenticar')}}" method="post">
+     <input type="email" name="email" class="form-control" id="floatingInput" placeholder="nome@email.com">
+     <input type="password" name="senha" class="form-control" id="floatingPassword" placeholder="Senha">
+		 <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Entrar</button>
+</form>
 
 {% endblock %}

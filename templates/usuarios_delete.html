@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+  Você tem certeza que deseja excluir o usuário {{usuario.nome}}?
+  <form method='post' action='/usuarios/delete/{{usuario.id}}'>
+    <input type="submit" value="Sim">
+  </form>
+  <a href="/usuarios">Cancelar</a>
+{% endblock%}
